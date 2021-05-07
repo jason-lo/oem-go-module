@@ -111,7 +111,7 @@ func saveToken(path string, token *oauth2.Token) {
 	json.NewEncoder(f).Encode(token)
 }
 
-func get_index_map(sheet_id string, sheet_range string) map[string]int {
+func Get_index_map(sheet_id string, sheet_range string) map[string]int {
 	b, err := ioutil.ReadFile("credentials.json")
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
