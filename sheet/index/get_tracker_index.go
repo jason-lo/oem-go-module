@@ -13,6 +13,8 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/sheets/v4"
+
+	"github.com/jason-lo/oem-go-module/util"
 )
 
 var (
@@ -29,10 +31,10 @@ func init() {
 	Stella_PB["gm"] = "Target \nGM Date"
 }
 
-var config = Config{}
+var config_local = config.Config{}
 
 func init() {
-	config.Read()
+	config_local.Read()
 }
 
 func check(e error) {
